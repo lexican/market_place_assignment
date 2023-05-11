@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:market_place_assignment/src/core/app_colors.dart';
 import 'package:market_place_assignment/src/core/model/product_model.dart';
+import 'package:market_place_assignment/src/core/widgets/product_details/about_product/about_product.dart';
+import 'package:market_place_assignment/src/core/widgets/app_divider/app_divider.dart';
 import 'package:market_place_assignment/src/core/widgets/badge/badge.dart';
+import 'package:market_place_assignment/src/core/widgets/home/product_list/product_list.dart';
 import 'package:market_place_assignment/src/core/widgets/product_details/product_description.dart';
 import 'package:market_place_assignment/src/core/widgets/product_details/product_image_card.dart';
+import 'package:market_place_assignment/src/core/widgets/reviews/reviews.dart';
 
 class ProductDetails extends StatefulWidget {
   final ProductModel product;
@@ -17,13 +21,35 @@ class ProductDetails extends StatefulWidget {
   State<ProductDetails> createState() => _ProductDetailsState();
 }
 
-class _ProductDetailsState extends State<ProductDetails> {
+class _ProductDetailsState extends State<ProductDetails>
+    with TickerProviderStateMixin {
   late ProductModel product;
+
+  late TabController tabController;
 
   @override
   void initState() {
-    super.initState();
     product = widget.product;
+    tabController = TabController(
+      initialIndex: 0,
+      length: 2, // adjust your length
+      vsync: this,
+    );
+    super.initState();
+  }
+
+  var widgetsList = [
+    [
+      const AboutProduct(),
+      const AppDivider(),
+    ],
+    [
+      const Reviews(),
+    ]
+  ];
+
+  List<Widget> _getTabAtIndex(int index) {
+    return widgetsList[index];
   }
 
   @override
@@ -77,14 +103,60 @@ class _ProductDetailsState extends State<ProductDetails> {
           ),
         ],
       ),
-      body: CustomScrollView(
-        slivers: [
-          ProductImageCard(
-            imagePath: product.imagePath,
-          ),
-          const ProductDescription(),
-        ],
+      body: DefaultTabController(
+        length: 2,
+        child: CustomScrollView(
+          slivers: [
+            ProductImageCard(
+              imagePath: product.imagePath,
+            ),
+            const ProductDescription(),
+            SliverToBoxAdapter(
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      width: 1,
+                      color: AppColors.lightGrey,
+                    ),
+                  ),
+                ),
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                ),
+                child: TabBar(
+                  labelColor: AppColors.primaryColor,
+                  controller: tabController,
+                  indicatorColor: AppColors.primaryColor,
+                  unselectedLabelColor: AppColors.lightGrey,
+                  onTap: ((value) {
+                    setState(() {});
+                  }),
+                  labelStyle: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700,
+                  ),
+                  tabs: const [
+                    Tab(
+                      text: 'About Item',
+                    ),
+                    Tab(
+                      text: 'Reviews',
+                    )
+                  ],
+                ),
+              ),
+            ),
+            ..._getTabAtIndex(tabController.index),
+          ],
+        ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    tabController.dispose();
   }
 }

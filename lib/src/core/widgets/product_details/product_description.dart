@@ -87,7 +87,7 @@ class ProductDescription extends StatelessWidget {
                 Row(
                   children: [
                     AppText.b1(
-                      content: "2.6K + Sold",
+                      content: "2.9K + Sold",
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w500,
                     ),
@@ -96,7 +96,7 @@ class ProductDescription extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 40.h,
+              height: 20.h,
             ),
           ],
         ),
