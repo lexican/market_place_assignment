@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:market_place_assignment/src/core/app_colors.dart';
 import 'package:market_place_assignment/src/core/model/product_model.dart';
 import 'package:market_place_assignment/src/core/widgets/app_text/app_text.dart';
+import 'package:market_place_assignment/src/core/widgets/fade_animation/fade_animation.dart';
 import 'package:market_place_assignment/src/core/widgets/rating/rating.dart';
 import 'package:market_place_assignment/src/features/product_details/product_details.dart';
 import 'package:page_transition/page_transition.dart';
@@ -22,11 +23,13 @@ class ProductItem extends StatelessWidget {
           context,
           PageTransition(
             type: PageTransitionType.fade,
-            child: ProductDetails(
-              product: product,
+            child: FadeAnimation(
+              child: ProductDetails(
+                product: product,
+              ),
             ),
             duration: const Duration(
-              milliseconds: 2000,
+              milliseconds: 300,
             ),
           ),
         );
