@@ -27,6 +27,9 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/arrow_down.svg
+  SvgGenImage get arrowDown => const SvgGenImage('assets/icons/arrow_down.svg');
+
   /// File path: assets/icons/category.svg
   SvgGenImage get category => const SvgGenImage('assets/icons/category.svg');
 
@@ -53,6 +56,9 @@ class $AssetsIconsGen {
   SvgGenImage get settingsInactive =>
       const SvgGenImage('assets/icons/settings_inactive.svg');
 
+  /// File path: assets/icons/thumbs_up.svg
+  SvgGenImage get thumbsUp => const SvgGenImage('assets/icons/thumbs_up.svg');
+
   /// File path: assets/icons/voucher_active.svg
   SvgGenImage get voucherActive =>
       const SvgGenImage('assets/icons/voucher_active.svg');
@@ -67,6 +73,7 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [
+        arrowDown,
         category,
         globeIcon,
         homeActive,
@@ -74,6 +81,7 @@ class $AssetsIconsGen {
         searchIcon,
         settingsActive,
         settingsInactive,
+        thumbsUp,
         voucherActive,
         walletActive,
         walletInactive
@@ -119,6 +127,18 @@ class $AssetsImagesGen {
   AssetGenImage get productImage3 =>
       const AssetGenImage('assets/images/product-image-3.jpg');
 
+  /// File path: assets/images/profile-1.jpg
+  AssetGenImage get profile1 =>
+      const AssetGenImage('assets/images/profile-1.jpg');
+
+  /// File path: assets/images/profile-2.jpg
+  AssetGenImage get profile2 =>
+      const AssetGenImage('assets/images/profile-2.jpg');
+
+  /// File path: assets/images/profile-3.jpg
+  AssetGenImage get profile3 =>
+      const AssetGenImage('assets/images/profile-3.jpg');
+
   /// File path: assets/images/topup.png
   AssetGenImage get topup => const AssetGenImage('assets/images/topup.png');
 
@@ -135,6 +155,9 @@ class $AssetsImagesGen {
         productImage1,
         productImage2,
         productImage3,
+        profile1,
+        profile2,
+        profile3,
         topup
       ];
 }

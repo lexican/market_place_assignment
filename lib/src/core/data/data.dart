@@ -1,6 +1,7 @@
 import 'package:market_place_assignment/gen/assets.gen.dart';
 import 'package:market_place_assignment/src/core/model/category_model.dart';
 import 'package:market_place_assignment/src/core/model/product_model.dart';
+import 'package:market_place_assignment/src/core/model/review_model.dart';
 import 'package:market_place_assignment/src/core/model/slider_model.dart';
 
 List<SliderModel> slidersList = [
@@ -68,4 +69,22 @@ List<ProductModel> products = [
   ProductModel(
     imagePath: Assets.images.cloth6.path,
   ),
+];
+
+List<ReviewModel> reviews = [
+  ReviewModel(
+    username: "Eren Y****r",
+    content: "According to my expectations. This is the best. Thank you",
+    imagePath: Assets.images.profile1.path,
+  ),
+  ReviewModel(
+    username: "Annie Le***hart",
+    content: "According to my expectations. This is the best. Thank you",
+    imagePath: Assets.images.profile2.path,
+  ),
+  ReviewModel(
+    username: "Levi A***man",
+    content: "According to my expectations. This is the best. Thank you",
+    imagePath: Assets.images.profile1.path,
+  )
 ];

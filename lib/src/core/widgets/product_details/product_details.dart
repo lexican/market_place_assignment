@@ -8,3 +8,6 @@ export 'shipping_info/shipping_info.dart';
 export 'seller_info/seller_info.dart';
 export 'reviews_and_ratings/reviews_and_ratings.dart';
 export 'ratings_stat/ratings_stat.dart';
+export 'reviews_with_images_and_videos/reviews_with_images_and_videos.dart';
+export 'top_reviews/top_reviews.dart';
+export 'review_item/review_item.dart';
