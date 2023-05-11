@@ -2,13 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:market_place_assignment/src/core/app_colors.dart';
 import 'package:market_place_assignment/src/core/model/product_model.dart';
-import 'package:market_place_assignment/src/core/widgets/product_details/about_product/about_product.dart';
-import 'package:market_place_assignment/src/core/widgets/app_divider/app_divider.dart';
-import 'package:market_place_assignment/src/core/widgets/badge/badge.dart';
-import 'package:market_place_assignment/src/core/widgets/home/product_list/product_list.dart';
-import 'package:market_place_assignment/src/core/widgets/product_details/product_description.dart';
-import 'package:market_place_assignment/src/core/widgets/product_details/product_image_card.dart';
-import 'package:market_place_assignment/src/core/widgets/reviews/reviews.dart';
+
+import '../../core/widgets/widgets.dart';
 
 class ProductDetails extends StatefulWidget {
   final ProductModel product;
@@ -42,6 +37,7 @@ class _ProductDetailsState extends State<ProductDetails>
     [
       const AboutProduct(),
       const AppDivider(),
+      const ProductDescription(),
     ],
     [
       const Reviews(),
@@ -110,7 +106,7 @@ class _ProductDetailsState extends State<ProductDetails>
             ProductImageCard(
               imagePath: product.imagePath,
             ),
-            const ProductDescription(),
+            const ProductTitleAndStat(),
             SliverToBoxAdapter(
               child: Container(
                 decoration: BoxDecoration(

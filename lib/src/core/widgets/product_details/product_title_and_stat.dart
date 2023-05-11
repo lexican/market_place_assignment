@@ -5,8 +5,8 @@ import 'package:market_place_assignment/src/core/widgets/app_bullet/app_bullet.d
 import 'package:market_place_assignment/src/core/widgets/app_text/app_text.dart';
 import 'package:market_place_assignment/src/core/widgets/rating/rating.dart';
 
-class ProductDescription extends StatelessWidget {
-  const ProductDescription({super.key});
+class ProductTitleAndStat extends StatelessWidget {
+  const ProductTitleAndStat({super.key});
 
   @override
   Widget build(BuildContext context) {
