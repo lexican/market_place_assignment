@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:market_place_assignment/src/core/app_colors.dart';
-import 'package:market_place_assignment/src/core/widgets/app_text/app_text.dart';
+import 'package:market_place_assignment/src/core/widgets/home/home_header.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -9,10 +9,11 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      appBar: AppBar(
-        backgroundColor: AppColors.backgroundColor,
-        title: const AppText.h1(
-          content: "Home",
+      body: const SafeArea(
+        child: CustomScrollView(
+          slivers: [
+            HomeHeader(),
+          ],
         ),
       ),
     );

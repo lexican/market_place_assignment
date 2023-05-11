@@ -27,6 +27,12 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/category.svg
+  SvgGenImage get category => const SvgGenImage('assets/icons/category.svg');
+
+  /// File path: assets/icons/globe_icon.svg
+  SvgGenImage get globeIcon => const SvgGenImage('assets/icons/globe_icon.svg');
+
   /// File path: assets/icons/home_active.svg
   SvgGenImage get homeActive =>
       const SvgGenImage('assets/icons/home_active.svg');
@@ -34,6 +40,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/home_inactive.svg
   SvgGenImage get homeInactive =>
       const SvgGenImage('assets/icons/home_inactive.svg');
+
+  /// File path: assets/icons/search-icon.svg
+  SvgGenImage get searchIcon =>
+      const SvgGenImage('assets/icons/search-icon.svg');
 
   /// File path: assets/icons/settings_active.svg
   SvgGenImage get settingsActive =>
@@ -57,8 +67,11 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<SvgGenImage> get values => [
+        category,
+        globeIcon,
         homeActive,
         homeInactive,
+        searchIcon,
         settingsActive,
         settingsInactive,
         voucherActive,
@@ -67,11 +80,41 @@ class $AssetsIconsGen {
       ];
 }
 
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/bill.png
+  AssetGenImage get bill => const AssetGenImage('assets/images/bill.png');
+
+  /// File path: assets/images/plane.png
+  AssetGenImage get plane => const AssetGenImage('assets/images/plane.png');
+
+  /// File path: assets/images/product-image-1.jpg
+  AssetGenImage get productImage1 =>
+      const AssetGenImage('assets/images/product-image-1.jpg');
+
+  /// File path: assets/images/product-image-2.jpg
+  AssetGenImage get productImage2 =>
+      const AssetGenImage('assets/images/product-image-2.jpg');
+
+  /// File path: assets/images/product-image-3.jpg
+  AssetGenImage get productImage3 =>
+      const AssetGenImage('assets/images/product-image-3.jpg');
+
+  /// File path: assets/images/topup.png
+  AssetGenImage get topup => const AssetGenImage('assets/images/topup.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values =>
+      [bill, plane, productImage1, productImage2, productImage3, topup];
+}
+
 class Assets {
   Assets._();
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
+  static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
 class AssetGenImage {
