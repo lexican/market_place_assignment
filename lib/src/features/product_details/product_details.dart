@@ -38,6 +38,9 @@ class _ProductDetailsState extends State<ProductDetails>
       const AboutProduct(),
       const AppDivider(),
       const ProductDescription(),
+      const AppDivider(),
+      const ShipingInfo(),
+      const AppDivider(),
     ],
     [
       const Reviews(),

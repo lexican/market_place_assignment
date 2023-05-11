@@ -19,13 +19,17 @@ class AboutProduct extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: const [
-                AboutProductItem(
-                  title: "Brand",
-                  value: "ChAmkpR",
+                Expanded(
+                  child: AboutProductItem(
+                    title: "Brand",
+                    value: "ChAmkpR",
+                  ),
                 ),
-                AboutProductItem(
-                  title: "Color",
-                  value: "Aprikot",
+                Expanded(
+                  child: AboutProductItem(
+                    title: "Color",
+                    value: "Aprikot",
+                  ),
                 )
               ],
             ),
@@ -35,13 +39,17 @@ class AboutProduct extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: const [
-                AboutProductItem(
-                  title: "Category",
-                  value: "Casual Shirt",
+                Expanded(
+                  child: AboutProductItem(
+                    title: "Category",
+                    value: "Casual Shirt",
+                  ),
                 ),
-                AboutProductItem(
-                  title: "Material",
-                  value: "Polyester",
+                Expanded(
+                  child: AboutProductItem(
+                    title: "Material",
+                    value: "Polyester",
+                  ),
                 )
               ],
             ),
@@ -51,13 +59,17 @@ class AboutProduct extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: const [
-                AboutProductItem(
-                  title: "Heavy",
-                  value: "200 g",
+                Expanded(
+                  child: AboutProductItem(
+                    title: "Heavy",
+                    value: "200 g",
+                  ),
                 ),
-                AboutProductItem(
-                  title: "Heavy",
-                  value: "200 g",
+                Expanded(
+                  child: AboutProductItem(
+                    title: "Heavy",
+                    value: "200 g",
+                  ),
                 )
               ],
             )

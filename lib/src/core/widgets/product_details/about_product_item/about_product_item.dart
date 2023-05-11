@@ -13,21 +13,19 @@ class AboutProductItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          AppText.b1(content: title),
-          SizedBox(
-            width: 16.w,
-          ),
-          AppText.h1(
-            content: value,
-            fontWeight: FontWeight.w700,
-            fontSize: 12.sp,
-          )
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        AppText.b1(content: title),
+        SizedBox(
+          width: 16.w,
+        ),
+        AppText.h1(
+          content: value,
+          fontWeight: FontWeight.w700,
+          fontSize: 12.sp,
+        )
+      ],
     );
   }
 }
