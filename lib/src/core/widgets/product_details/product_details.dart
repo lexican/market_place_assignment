@@ -6,3 +6,5 @@ export 'product_image_card.dart';
 export 'product_title_and_stat.dart';
 export 'shipping_info/shipping_info.dart';
 export 'seller_info/seller_info.dart';
+export 'reviews_and_ratings/reviews_and_ratings.dart';
+export 'ratings_stat/ratings_stat.dart';

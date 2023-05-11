@@ -43,6 +43,7 @@ class _ProductDetailsState extends State<ProductDetails>
       const AppDivider(),
       const SellerInfo(),
       const AppDivider(),
+      const ReviewsAndRating()
     ],
     [
       const Reviews(),
