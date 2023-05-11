@@ -6,7 +6,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:market_place_assignment/gen/assets.gen.dart';
 import 'package:market_place_assignment/src/core/app_colors.dart';
 import 'package:market_place_assignment/src/core/data/data.dart';
+import 'package:market_place_assignment/src/core/widgets/app_text/app_text.dart';
 import 'package:market_place_assignment/src/core/widgets/badge/badge.dart';
+import 'package:market_place_assignment/src/core/widgets/home/home_category/home_category.dart';
 import 'package:market_place_assignment/src/core/widgets/home/slider_item/slider_item.dart';
 import 'package:market_place_assignment/src/core/widgets/input_fields/input_text_field.dart';
 
@@ -31,7 +33,7 @@ class _HomeHeaderState extends State<HomeHeader> {
     final size = MediaQuery.of(context).size;
     return SliverAppBar(
       expandedHeight:
-          Platform.isAndroid ? size.height / 1.5 : size.height / 1.75,
+          Platform.isAndroid ? size.height / 1.58 : size.height / 1.9,
       elevation: 0,
       pinned: true,
       forceElevated: false,
@@ -75,6 +77,31 @@ class _HomeHeaderState extends State<HomeHeader> {
           ),
         ],
       ),
+      bottom: PreferredSize(
+        preferredSize: const Size.fromHeight(50),
+        child: Container(
+          padding:
+              const EdgeInsets.only(top: 30, left: 20, right: 20, bottom: 20),
+          decoration: BoxDecoration(
+            color: AppColors.backgroundColor,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              AppText.h1(
+                content: "Best Sale Product",
+                fontSize: 16.sp,
+              ),
+              AppText.b1(
+                content: "See more",
+                color: AppColors.primaryColor,
+                fontSize: 11.sp,
+                fontWeight: FontWeight.w600,
+              ),
+            ],
+          ),
+        ),
+      ),
       flexibleSpace: FlexibleSpaceBar(
         collapseMode: CollapseMode.pin,
         stretchModes: const [
@@ -93,6 +120,14 @@ class _HomeHeaderState extends State<HomeHeader> {
                   sliderLength: slidersList.length,
                 );
               },
+            ),
+            Positioned(
+              bottom: const Size.fromHeight(50).height + 20.h,
+              //bottom: 0,
+              child: HomeCategory(
+                sliderCurrentIndex: _sliderCurrentIndex,
+                sliderLength: slidersList.length,
+              ),
             ),
           ],
         ),
