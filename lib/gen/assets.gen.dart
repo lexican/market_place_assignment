@@ -86,6 +86,24 @@ class $AssetsImagesGen {
   /// File path: assets/images/bill.png
   AssetGenImage get bill => const AssetGenImage('assets/images/bill.png');
 
+  /// File path: assets/images/cloth-1.jpg
+  AssetGenImage get cloth1 => const AssetGenImage('assets/images/cloth-1.jpg');
+
+  /// File path: assets/images/cloth-2.jpg
+  AssetGenImage get cloth2 => const AssetGenImage('assets/images/cloth-2.jpg');
+
+  /// File path: assets/images/cloth-3.jpeg
+  AssetGenImage get cloth3 => const AssetGenImage('assets/images/cloth-3.jpeg');
+
+  /// File path: assets/images/cloth-4.jpeg
+  AssetGenImage get cloth4 => const AssetGenImage('assets/images/cloth-4.jpeg');
+
+  /// File path: assets/images/cloth-5.jpeg
+  AssetGenImage get cloth5 => const AssetGenImage('assets/images/cloth-5.jpeg');
+
+  /// File path: assets/images/cloth-6.jpeg
+  AssetGenImage get cloth6 => const AssetGenImage('assets/images/cloth-6.jpeg');
+
   /// File path: assets/images/plane.png
   AssetGenImage get plane => const AssetGenImage('assets/images/plane.png');
 
@@ -105,8 +123,20 @@ class $AssetsImagesGen {
   AssetGenImage get topup => const AssetGenImage('assets/images/topup.png');
 
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [bill, plane, productImage1, productImage2, productImage3, topup];
+  List<AssetGenImage> get values => [
+        bill,
+        cloth1,
+        cloth2,
+        cloth3,
+        cloth4,
+        cloth5,
+        cloth6,
+        plane,
+        productImage1,
+        productImage2,
+        productImage3,
+        topup
+      ];
 }
 
 class Assets {

@@ -1,5 +1,6 @@
 import 'package:market_place_assignment/gen/assets.gen.dart';
 import 'package:market_place_assignment/src/core/model/category_model.dart';
+import 'package:market_place_assignment/src/core/model/product_model.dart';
 import 'package:market_place_assignment/src/core/model/slider_model.dart';
 
 List<SliderModel> slidersList = [
@@ -44,5 +45,27 @@ List<CategoryModel> catogories = [
   CategoryModel(
     title: "Top Up",
     iconPath: Assets.images.topup.path,
+  ),
+];
+
+List<ProductModel> products = [
+  ProductModel(
+    imagePath: Assets.images.cloth1.path,
+  ),
+  ProductModel(
+    imagePath: Assets.images.cloth2.path,
+    isFavourite: true,
+  ),
+  ProductModel(
+    imagePath: Assets.images.cloth3.path,
+  ),
+  ProductModel(
+    imagePath: Assets.images.cloth4.path,
+  ),
+  ProductModel(
+    imagePath: Assets.images.cloth5.path,
+  ),
+  ProductModel(
+    imagePath: Assets.images.cloth6.path,
   ),
 ];

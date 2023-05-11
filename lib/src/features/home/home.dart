@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:market_place_assignment/src/core/app_colors.dart';
 import 'package:market_place_assignment/src/core/widgets/home/home_header.dart';
+import 'package:market_place_assignment/src/core/widgets/home/product_list/product_list.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -13,6 +14,7 @@ class Home extends StatelessWidget {
         child: CustomScrollView(
           slivers: [
             HomeHeader(),
+            ProductList(),
           ],
         ),
       ),

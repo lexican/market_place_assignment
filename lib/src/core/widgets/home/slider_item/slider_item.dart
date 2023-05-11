@@ -82,7 +82,7 @@ class HomeSliderItem extends StatelessWidget {
                         AppText.b1(
                           content: sliderModel.description ?? "",
                           fontSize: 10.sp,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w500,
                         ),
                       ],
                     ),
