@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:market_place_assignment/src/core/app_colors.dart';
+import 'package:market_place_assignment/src/core/widgets/app_text/app_text.dart';
 
 class AppBottomNavigationBarItem extends StatelessWidget {
   final String activeIconPath;
@@ -49,21 +50,15 @@ class AppBottomNavigationBarItem extends StatelessWidget {
                   color: inActiveIconColor,
                 ),
           isSelectedTab
-              ? Text(
-                  label,
-                  style: TextStyle(
-                    color: AppColors.headlineTextColor,
-                    fontSize: 13.sp,
-                    fontWeight: FontWeight.w700,
-                  ),
+              ? AppText.h1(
+                  content: label,
+                  fontSize: 13.sp,
+                  fontWeight: FontWeight.w700,
                 )
-              : Text(
-                  label,
-                  style: TextStyle(
-                    color: AppColors.bodyTextColor,
-                    fontSize: 13.sp,
-                    fontWeight: FontWeight.w500,
-                  ),
+              : AppText.h1(
+                  content: label,
+                  fontSize: 13.sp,
+                  fontWeight: FontWeight.w500,
                 )
         ],
       ),
