@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Rating extends StatelessWidget {
   final double size;
@@ -12,7 +11,7 @@ class Rating extends StatelessWidget {
   Widget build(BuildContext context) {
     return Icon(
       Icons.star,
-      size: 12.sp,
+      size: size,
       color: const Color(
         0xFFe39c4b,
       ),

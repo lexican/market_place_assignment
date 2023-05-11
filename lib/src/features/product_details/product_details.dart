@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:market_place_assignment/src/core/app_colors.dart';
 import 'package:market_place_assignment/src/core/model/product_model.dart';
 import 'package:market_place_assignment/src/core/widgets/badge/badge.dart';
+import 'package:market_place_assignment/src/core/widgets/product_details/product_description.dart';
 import 'package:market_place_assignment/src/core/widgets/product_details/product_image_card.dart';
 
 class ProductDetails extends StatefulWidget {
@@ -81,6 +82,7 @@ class _ProductDetailsState extends State<ProductDetails> {
           ProductImageCard(
             imagePath: product.imagePath,
           ),
+          const ProductDescription(),
         ],
       ),
     );
