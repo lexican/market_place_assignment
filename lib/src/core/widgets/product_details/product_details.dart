@@ -12,3 +12,4 @@ export 'reviews_with_images_and_videos/reviews_with_images_and_videos.dart';
 export 'top_reviews/top_reviews.dart';
 export 'review_item/review_item.dart';
 export 'recommendations_header/recommendations_header.dart';
+export 'pagination/top_reviews_pagination.dart';

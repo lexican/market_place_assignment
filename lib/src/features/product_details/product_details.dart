@@ -48,6 +48,7 @@ class _ProductDetailsState extends State<ProductDetails>
       const ReviewsWithImagesAndVideos(),
       const AppDivider(),
       const TopReviews(),
+      const TopReviewsPagination(),
       const RecommendationsHeader(),
       const ProductList()
     ],

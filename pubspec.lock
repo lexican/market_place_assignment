@@ -230,6 +230,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.1"
+  flutter_pagination:
+    dependency: "direct main"
+    description:
+      name: flutter_pagination
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.8"
   flutter_rating_bar:
     dependency: "direct main"
     description:
