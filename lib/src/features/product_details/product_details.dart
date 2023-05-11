@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:market_place_assignment/src/core/app_colors.dart';
 import 'package:market_place_assignment/src/core/model/product_model.dart';
 import 'package:market_place_assignment/src/core/widgets/badge/badge.dart';
+import 'package:market_place_assignment/src/core/widgets/product_details/product_image_card.dart';
 
 class ProductDetails extends StatefulWidget {
   final ProductModel product;
@@ -16,6 +17,14 @@ class ProductDetails extends StatefulWidget {
 }
 
 class _ProductDetailsState extends State<ProductDetails> {
+  late ProductModel product;
+
+  @override
+  void initState() {
+    super.initState();
+    product = widget.product;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +43,7 @@ class _ProductDetailsState extends State<ProductDetails> {
         ),
         actions: [
           GestureDetector(
-            child: widget.product.isFavourite
+            child: product.isFavourite
                 ? Icon(
                     Icons.favorite,
                     color: AppColors.secondaryColor,
@@ -64,6 +73,13 @@ class _ProductDetailsState extends State<ProductDetails> {
           ),
           SizedBox(
             width: 20.w,
+          ),
+        ],
+      ),
+      body: CustomScrollView(
+        slivers: [
+          ProductImageCard(
+            imagePath: product.imagePath,
           ),
         ],
       ),
