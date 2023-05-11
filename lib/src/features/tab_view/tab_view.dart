@@ -39,10 +39,9 @@ class _TabViewState extends State<TabView> {
       bottomNavigationBar: Container(
         padding: const EdgeInsets.symmetric(
           horizontal: 20,
-          vertical: 20,
         ),
         color: Colors.white,
-        height: 90,
+        height: 80,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,

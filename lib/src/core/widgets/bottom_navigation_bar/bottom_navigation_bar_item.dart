@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:market_place_assignment/src/core/app_colors.dart';
 import 'package:market_place_assignment/src/core/widgets/app_text/app_text.dart';
 
 class AppBottomNavigationBarItem extends StatelessWidget {
@@ -34,21 +33,24 @@ class AppBottomNavigationBarItem extends StatelessWidget {
         setCurrentTabIndex(tabIndex);
       },
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           isSelectedTab
               ? SvgPicture.asset(
                   activeIconPath,
-                  width: 24,
-                  height: 24,
+                  width: 20,
+                  height: 20,
                   color: activeIconColor,
                 )
               : SvgPicture.asset(
                   inactiveIconPath,
-                  width: 24,
-                  height: 24,
+                  width: 20,
+                  height: 20,
                   color: inActiveIconColor,
                 ),
+          SizedBox(
+            height: 8.h,
+          ),
           isSelectedTab
               ? AppText.h1(
                   content: label,
