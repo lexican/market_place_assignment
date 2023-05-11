@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:market_place_assignment/gen/fonts.gen.dart';
 import 'package:market_place_assignment/src/core/app_colors.dart';
+import 'package:market_place_assignment/src/features/tab_view/tab_view.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ),
+          home: const TabView(),
         );
       },
     );
