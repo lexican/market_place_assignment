@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:market_place_assignment/src/core/app_colors.dart';
 
 class AppBadge extends StatelessWidget {
   final IconData icon;
@@ -28,9 +29,7 @@ class AppBadge extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(2),
             decoration: BoxDecoration(
-              color: const Color(
-                0xFFe55986,
-              ),
+              color: AppColors.secondaryColor,
               borderRadius: BorderRadius.circular(4),
             ),
             constraints: BoxConstraints(

@@ -7,4 +7,5 @@ class AppColors {
   static Color headlineTextColor = const Color(0xFF161A33);
   static Color bodyTextColor = const Color(0xFF616161);
   static Color grey = const Color(0xFF616161);
+  static Color secondaryColor = const Color(0xFFe55986);
 }

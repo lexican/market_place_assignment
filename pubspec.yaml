@@ -39,6 +39,7 @@ dependencies:
   flutter_screenutil: ^5.7.0
   card_swiper: ^2.0.4
   dots_indicator: ^3.0.0
+  page_transition: ^2.0.9
 
 dev_dependencies:
   build_runner:

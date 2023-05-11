@@ -4,6 +4,8 @@ import 'package:market_place_assignment/src/core/app_colors.dart';
 import 'package:market_place_assignment/src/core/model/product_model.dart';
 import 'package:market_place_assignment/src/core/widgets/app_text/app_text.dart';
 import 'package:market_place_assignment/src/core/widgets/rating/rating.dart';
+import 'package:market_place_assignment/src/features/product_details/product_details.dart';
+import 'package:page_transition/page_transition.dart';
 
 class ProductItem extends StatelessWidget {
   final ProductModel product;
@@ -15,7 +17,20 @@ class ProductItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          PageTransition(
+            type: PageTransitionType.fade,
+            child: ProductDetails(
+              product: product,
+            ),
+            duration: const Duration(
+              milliseconds: 2000,
+            ),
+          ),
+        );
+      },
       child: Container(
         color: Colors.transparent,
         child: Column(
@@ -34,9 +49,9 @@ class ProductItem extends StatelessWidget {
                     top: 10,
                     right: 10,
                     child: product.isFavourite
-                        ? const Icon(
+                        ? Icon(
                             Icons.favorite,
-                            color: Colors.red,
+                            color: AppColors.secondaryColor,
                           )
                         : const Icon(
                             Icons.favorite_outline,

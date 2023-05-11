@@ -54,12 +54,12 @@ class AppBottomNavigationBarItem extends StatelessWidget {
           isSelectedTab
               ? AppText.h1(
                   content: label,
-                  fontSize: 13.sp,
+                  fontSize: 12.sp,
                   fontWeight: FontWeight.w700,
                 )
               : AppText.h1(
                   content: label,
-                  fontSize: 13.sp,
+                  fontSize: 12.sp,
                   fontWeight: FontWeight.w500,
                 )
         ],
