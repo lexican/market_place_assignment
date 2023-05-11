@@ -5,3 +5,4 @@ export 'product_description_bullet_list/product_description_bullet_list.dart';
 export 'product_image_card.dart';
 export 'product_title_and_stat.dart';
 export 'shipping_info/shipping_info.dart';
+export 'seller_info/seller_info.dart';
