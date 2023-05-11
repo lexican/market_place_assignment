@@ -11,4 +11,4 @@ export 'ratings_stat/ratings_stat.dart';
 export 'reviews_with_images_and_videos/reviews_with_images_and_videos.dart';
 export 'top_reviews/top_reviews.dart';
 export 'review_item/review_item.dart';
-export 'recommended_list_header/recommended_list_header.dart';
+export 'recommendations_header/recommendations_header.dart';

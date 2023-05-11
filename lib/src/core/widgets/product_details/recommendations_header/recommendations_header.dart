@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:market_place_assignment/src/core/app_colors.dart';
 import 'package:market_place_assignment/src/core/widgets/widgets.dart';
 
-class RecommendedListHeader extends StatelessWidget {
-  const RecommendedListHeader({super.key});
+class RecommendationsHeader extends StatelessWidget {
+  const RecommendationsHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
