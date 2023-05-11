@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:market_place_assignment/src/core/app_colors.dart';
 import 'package:market_place_assignment/src/core/model/product_model.dart';
+import 'package:market_place_assignment/src/core/widgets/home/product_list/product_list.dart';
 
 import '../../core/widgets/widgets.dart';
 
@@ -47,7 +48,8 @@ class _ProductDetailsState extends State<ProductDetails>
       const ReviewsWithImagesAndVideos(),
       const AppDivider(),
       const TopReviews(),
-      const AppDivider(),
+      const RecommendedListHeader(),
+      const ProductList()
     ],
     [
       const Reviews(),
