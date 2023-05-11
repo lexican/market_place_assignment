@@ -39,59 +39,24 @@ class ProductImageCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(
-                            8,
-                          ),
-                          child: Image.asset(
-                            imagePath,
-                            height: 40.h,
-                            width: 40.w,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 12.h,
-                        ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(
-                            8,
-                          ),
-                          child: Image.asset(
-                            imagePath,
-                            height: 40.h,
-                            width: 40.w,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 12.h,
-                        ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(
-                            8,
-                          ),
-                          child: Image.asset(
-                            imagePath,
-                            height: 40.h,
-                            width: 40.w,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 12.h,
-                        ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(
-                            8,
-                          ),
-                          child: Image.asset(
-                            imagePath,
-                            height: 40.h,
-                            width: 40.w,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
+                        ...List<Widget>.generate(4, (i) {
+                          return Padding(
+                            padding: const EdgeInsets.only(
+                              bottom: 12,
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(
+                                8,
+                              ),
+                              child: Image.asset(
+                                imagePath,
+                                height: 40.h,
+                                width: 40.w,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          );
+                        }),
                       ],
                     ),
                   )
