@@ -30,6 +30,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/arrow_down.svg
   SvgGenImage get arrowDown => const SvgGenImage('assets/icons/arrow_down.svg');
 
+  /// File path: assets/icons/arrow_up.svg
+  SvgGenImage get arrowUp => const SvgGenImage('assets/icons/arrow_up.svg');
+
   /// File path: assets/icons/category.svg
   SvgGenImage get category => const SvgGenImage('assets/icons/category.svg');
 
@@ -74,6 +77,7 @@ class $AssetsIconsGen {
   /// List of all assets
   List<SvgGenImage> get values => [
         arrowDown,
+        arrowUp,
         category,
         globeIcon,
         homeActive,

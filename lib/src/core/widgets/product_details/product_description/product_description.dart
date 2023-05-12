@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:market_place_assignment/gen/assets.gen.dart';
 import 'package:market_place_assignment/src/core/app_colors.dart';
 import 'package:market_place_assignment/src/core/widgets/app_text/app_text.dart';
 import 'package:market_place_assignment/src/core/widgets/product_details/product_description_bullet_list/product_description_bullet_list.dart';
@@ -66,14 +67,26 @@ class _ProductDescriptionState extends State<ProductDescription> {
               child: Row(
                 children: [
                   AppText.b1(
-                    content: showAll ? "See less" : "Show all",
-                    fontSize: 10.sp,
+                    content: showAll ? "See less" : "See more",
+                    fontSize: 11.sp,
                     color: AppColors.primaryColor,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w600,
+                    
                   ),
-                  const Icon(
-                    Icons.arrow_drop_up_outlined,
-                  )
+                  SizedBox(
+                    width: 6.w,
+                  ),
+                  showAll
+                      ? Assets.icons.arrowUp.svg(
+                          color: AppColors.lightGrey,
+                          height: 14,
+                          width: 14,
+                        )
+                      : Assets.icons.arrowDown.svg(
+                          color: AppColors.lightGrey,
+                          height: 14,
+                          width: 14,
+                        )
                 ],
               ),
             ),

@@ -21,12 +21,12 @@ class _ProductDetailsState extends State<ProductDetails>
     with TickerProviderStateMixin {
   late ProductModel product;
 
-  late TabController tabController;
+  late TabController _tabController;
 
   @override
   void initState() {
     product = widget.product;
-    tabController = TabController(
+    _tabController = TabController(
       initialIndex: 0,
       length: 2, // adjust your length
       vsync: this,
@@ -135,7 +135,7 @@ class _ProductDetailsState extends State<ProductDetails>
                 ),
                 child: TabBar(
                   labelColor: AppColors.primaryColor,
-                  controller: tabController,
+                  controller: _tabController,
                   indicatorColor: AppColors.primaryColor,
                   unselectedLabelColor: AppColors.lightGrey,
                   onTap: ((value) {
@@ -156,8 +156,108 @@ class _ProductDetailsState extends State<ProductDetails>
                 ),
               ),
             ),
-            ..._getTabAtIndex(tabController.index),
+            ..._getTabAtIndex(_tabController.index),
           ],
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.transparent,
+        elevation: 0,
+        child: Container(
+          color: Colors.white,
+          height: kToolbarHeight * 1.5,
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 12,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AppText.b1(
+                    content: "Total price",
+                    fontSize: 10.sp,
+                  ),
+                  SizedBox(
+                    height: 4.h,
+                  ),
+                  AppText.h1(
+                    content: "\$18.00",
+                    color: AppColors.primaryColor,
+                    fontSize: 20.sp,
+                  )
+                ],
+              ),
+              Row(
+                children: [
+                  Container(
+                    height: 50,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 20,
+                      vertical: 12,
+                    ),
+                    decoration: BoxDecoration(
+                      color: AppColors.primaryColor,
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(8),
+                        bottomLeft: Radius.circular(8),
+                      ),
+                    ),
+                    child: Center(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Icon(
+                            Icons.shopping_bag_outlined,
+                            color: Colors.white,
+                          ),
+                          SizedBox(
+                            width: 4.w,
+                          ),
+                          AppText.b1(
+                            content: "1",
+                            fontSize: 16.sp,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 50,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 30,
+                      vertical: 12,
+                    ),
+                    decoration: const BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(8),
+                        bottomRight: Radius.circular(8),
+                      ),
+                    ),
+                    child: Center(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          AppText.b1(
+                            content: "Buy Now",
+                            fontSize: 16.sp,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -166,6 +266,6 @@ class _ProductDetailsState extends State<ProductDetails>
   @override
   void dispose() {
     super.dispose();
-    tabController.dispose();
+    _tabController.dispose();
   }
 }
