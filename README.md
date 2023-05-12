@@ -2,15 +2,29 @@
 
 An e-commerce POC.
 
-## Getting Started
+This Market Place app is built with Flutter.
 
-This project is a starting point for a Flutter application.
+## Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+### Home Screen
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="screenshots/home_ios.png" height="500em" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="screenshots/favourites_ios.png" height="500em" />
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Product Details Screen
+
+<img src="screenshots/product_details_ios.png" height="500em" />
+
+## ✨ Requirements
+
+- Any Operating System (ie. MacOS X, Linux, Windows)
+- Any IDE with Flutter SDK installed (ie. Android Studio, VSCode, IntelliJ, etc)
+- A little knowledge of Dart and Flutter
+
+## Run Locally
+
+```bash
+  git clone https://github.com/lexican/market_place_assignment.git
+  cd market_place_assignment
+  flutter pub get
+  flutter run
+```
