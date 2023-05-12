@@ -8,7 +8,7 @@ This Market Place app is built with Flutter.
 
 ### Home Screen
 
-<img src="screenshots/home_ios.png" height="500em" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="screenshots/favourites_ios.png" height="500em" />
+<img src="screenshots/home_ios.png" height="500em" />
 
 ### Product Details Screen
 
