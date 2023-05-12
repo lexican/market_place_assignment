@@ -44,13 +44,17 @@ class InputTextField extends StatelessWidget {
         hintStyle: hintStyle ??
             TextStyle(
               color: AppColors.lightGrey,
-              fontSize: 16.sp,
+              fontSize: 12.sp,
             ),
         hintText: hintText,
         fillColor: fillColor ?? Colors.transparent,
         contentPadding: contentPadding ?? const EdgeInsets.all(0),
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
+        prefixIconConstraints: const BoxConstraints(
+          minWidth: 18,
+          minHeight: 18,
+        ),
       ),
       controller: controller,
     );

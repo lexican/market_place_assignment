@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:market_place_assignment/src/core/model/slider_model.dart';
@@ -25,7 +27,7 @@ class HomeSliderItem extends StatelessWidget {
           width: double.maxFinite,
         ),
         Positioned(
-          top: kToolbarHeight + 10.h,
+          top: Platform.isAndroid ? kToolbarHeight * 1.5 : kToolbarHeight * 2,
           left: 0,
           child: Padding(
             padding: const EdgeInsets.all(20),

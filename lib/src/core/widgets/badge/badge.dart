@@ -24,8 +24,8 @@ class AppBadge extends StatelessWidget {
           onPressed: () {},
         ),
         Positioned(
-          right: 0,
-          top: 4,
+          right: 5,
+          top: 6,
           child: Container(
             padding: const EdgeInsets.all(2),
             decoration: BoxDecoration(
@@ -33,15 +33,15 @@ class AppBadge extends StatelessWidget {
               borderRadius: BorderRadius.circular(4),
             ),
             constraints: BoxConstraints(
-              minWidth: 22.w,
-              minHeight: 18.h,
+              minWidth: 18.w,
+              minHeight: 12.h,
             ),
             child: Center(
               child: Text(
                 count,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 10.sp,
+                  fontSize: 8.sp,
                 ),
                 textAlign: TextAlign.center,
               ),

@@ -41,7 +41,7 @@ class _TabViewState extends State<TabView> {
           horizontal: 20,
         ),
         color: Colors.white,
-        height: 75,
+        height: 70,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,

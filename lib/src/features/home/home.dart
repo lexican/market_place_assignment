@@ -10,13 +10,11 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      body: const SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            HomeHeader(),
-            ProductList(),
-          ],
-        ),
+      body: const CustomScrollView(
+        slivers: [
+          HomeHeader(),
+          ProductList(),
+        ],
       ),
     );
   }

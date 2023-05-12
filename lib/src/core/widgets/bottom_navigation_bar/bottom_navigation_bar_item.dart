@@ -38,14 +38,14 @@ class AppBottomNavigationBarItem extends StatelessWidget {
           isSelectedTab
               ? SvgPicture.asset(
                   activeIconPath,
-                  width: 20,
-                  height: 20,
+                  width: 16,
+                  height: 16,
                   color: activeIconColor,
                 )
               : SvgPicture.asset(
                   inactiveIconPath,
-                  width: 20,
-                  height: 20,
+                   width: 16,
+                  height: 16,
                   color: inActiveIconColor,
                 ),
           SizedBox(
@@ -54,12 +54,12 @@ class AppBottomNavigationBarItem extends StatelessWidget {
           isSelectedTab
               ? AppText.h1(
                   content: label,
-                  fontSize: 12.sp,
+                  fontSize: 11.sp,
                   fontWeight: FontWeight.w700,
                 )
               : AppText.h1(
                   content: label,
-                  fontSize: 12.sp,
+                  fontSize: 11.sp,
                   fontWeight: FontWeight.w500,
                 )
         ],

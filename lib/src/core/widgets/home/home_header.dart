@@ -34,33 +34,35 @@ class _HomeHeaderState extends State<HomeHeader> {
     return SliverAppBar(
       expandedHeight:
           Platform.isAndroid ? size.height / 1.58 : size.height / 1.9,
+      collapsedHeight: kToolbarHeight * 1.5,
       elevation: 0,
       pinned: true,
       forceElevated: false,
-      backgroundColor: AppColors.backgroundColor,
+      backgroundColor: Colors.white,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
             child: SizedBox(
-              height: 40.h,
+              height: 33.h,
               child: InputTextField(
                 hintText: "Search..",
                 prefixIcon: Padding(
                   padding: const EdgeInsets.only(
                     left: 14,
-                    right: 20,
+                    right: 10,
                   ),
                   child: GestureDetector(
                     onTap: () {},
                     child: Assets.icons.searchIcon.svg(
                       color: AppColors.lightGrey,
-                      height: 24,
-                      width: 24,
+                      height: 18,
+                      width: 18,
                     ),
                   ),
                 ),
+                
               ),
             ),
           ),
@@ -122,8 +124,7 @@ class _HomeHeaderState extends State<HomeHeader> {
               },
             ),
             Positioned(
-              bottom: const Size.fromHeight(50).height + 20.h,
-              //bottom: 0,
+              bottom: const Size.fromHeight(50).height + 18.h,
               child: HomeCategory(
                 sliderCurrentIndex: _sliderCurrentIndex,
                 sliderLength: slidersList.length,
