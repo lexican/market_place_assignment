@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
           home: const TabView(),
+          debugShowCheckedModeBanner: false,
         );
       },
     );
