@@ -27,7 +27,7 @@ class HomeSliderItem extends StatelessWidget {
           width: double.maxFinite,
         ),
         Positioned(
-          top: Platform.isAndroid ? kToolbarHeight * 1.5 : kToolbarHeight * 2,
+          top: Platform.isAndroid ? kToolbarHeight * 1.5 : kToolbarHeight * 2.3,
           left: 0,
           child: Padding(
             padding: const EdgeInsets.all(20),

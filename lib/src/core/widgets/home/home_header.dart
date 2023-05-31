@@ -34,50 +34,53 @@ class _HomeHeaderState extends State<HomeHeader> {
     return SliverAppBar(
       expandedHeight:
           Platform.isAndroid ? size.height / 1.58 : size.height / 1.9,
-      collapsedHeight: kToolbarHeight * 1.5,
+      collapsedHeight: 100.h,
+      toolbarHeight: 77.h,
       elevation: 0,
       pinned: true,
       forceElevated: false,
       backgroundColor: Colors.white,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Expanded(
-            child: SizedBox(
-              height: 33.h,
-              child: InputTextField(
-                hintText: "Search..",
-                prefixIcon: Padding(
-                  padding: const EdgeInsets.only(
-                    left: 14,
-                    right: 10,
-                  ),
-                  child: GestureDetector(
-                    onTap: () {},
-                    child: Assets.icons.searchIcon.svg(
-                      color: AppColors.lightGrey,
-                      height: 18,
-                      width: 18,
+      title: SizedBox(
+        height: 77.h,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(
+              child: SizedBox(
+                height: 33.h,
+                child: InputTextField(
+                  hintText: "Search..",
+                  prefixIcon: Padding(
+                    padding: const EdgeInsets.only(
+                      left: 14,
+                      right: 10,
+                    ),
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: Assets.icons.searchIcon.svg(
+                        color: AppColors.lightGrey,
+                        height: 18,
+                        width: 18,
+                      ),
                     ),
                   ),
                 ),
-                
               ),
             ),
-          ),
-          SizedBox(
-            width: 8.w,
-          ),
-          const AppBadge(
-            icon: Icons.shopping_bag_outlined,
-            count: "1",
-          ),
-          const AppBadge(
-            icon: Icons.notifications_none_outlined,
-            count: "9+",
-          ),
-        ],
+            SizedBox(
+              width: 8.w,
+            ),
+            const AppBadge(
+              icon: Icons.shopping_bag_outlined,
+              count: "1",
+            ),
+            const AppBadge(
+              icon: Icons.notifications_none_outlined,
+              count: "9+",
+            ),
+          ],
+        ),
       ),
       bottom: PreferredSize(
         preferredSize: const Size.fromHeight(50),
@@ -110,21 +113,29 @@ class _HomeHeaderState extends State<HomeHeader> {
           StretchMode.blurBackground,
           StretchMode.zoomBackground,
         ],
-        background: Stack(
+        background: Column(
           children: [
-            Swiper(
-              onIndexChanged: setSliderCurrentIndex,
-              itemCount: slidersList.length,
-              itemBuilder: (context, index) {
-                return HomeSliderItem(
-                  sliderModel: slidersList[index],
-                  sliderCurrentIndex: _sliderCurrentIndex,
-                  sliderLength: slidersList.length,
-                );
-              },
+            Expanded(
+              child: Stack(
+                children: [
+                  Swiper(
+                    onIndexChanged: setSliderCurrentIndex,
+                    itemCount: slidersList.length,
+                    itemBuilder: (context, index) {
+                      return HomeSliderItem(
+                        sliderModel: slidersList[index],
+                        sliderCurrentIndex: _sliderCurrentIndex,
+                        sliderLength: slidersList.length,
+                      );
+                    },
+                  ),
+                ],
+              ),
             ),
-            Positioned(
-              bottom: const Size.fromHeight(50).height + 18.h,
+            Container(
+              margin: EdgeInsets.only(
+                bottom: const Size.fromHeight(50).height + 18.h,
+              ),
               child: HomeCategory(
                 sliderCurrentIndex: _sliderCurrentIndex,
                 sliderLength: slidersList.length,
